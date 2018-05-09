@@ -139,6 +139,8 @@ double psnr(Mat & m0, Mat & m1, int block_size) {
 	return (10 * log10((D*D) / mse(m0, m1, true, false)));
 }
 
+
+// Structural Similarity Index Measure
 double ssim(Mat & m0, Mat & m1, int block_size) {
 	double ssim = 0;
 

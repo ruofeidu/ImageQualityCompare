@@ -1,2 +1,24 @@
 # ImageQualityCompare
 Compare the quality between two images using RMSE, SSIM, and PSNR.
+The values of the PSNR can be predicted from the SSIM and vice-versa. The
+PSNR and the SSIM mainly differ on their degree of sensitivity to image degradations. 
+
+## Usage:
+```bash
+Compare image_file_name_1 image_file_name_2 [--mask] [--block_size] 2
+```
+The optional mask parameter will neglect the total white or black pixels in the image1.
+The optional block_size parameter determines the window size of SSIM.
+The smaller block_size, the slower.
+
+## RMSE: Root mean squared error
+Most sensitive. 
+Wiki: https://en.wikipedia.org/wiki/Root-mean-square_deviation
+
+## SSIM: Structural Similarity Index Measure
+The SSIM index is calculated on various windows of an image.
+Wiki: https://en.wikipedia.org/wiki/Structural_similarity
+
+## PSNR: Peak signal-to-noise ratio
+PSNR is most easily defined via the mean squared error (MSE).
+Wiki: https://en.wikipedia.org/wiki/Peak_signal-to-noise_ratio
